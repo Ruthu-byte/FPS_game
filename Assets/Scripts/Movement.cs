@@ -11,10 +11,10 @@ public class Movement : MonoBehaviour
     public float jumpSpeed = 35.0f;
     public float terminalVelocity = -25.0f;
     public float minFall = -1.5f;
-    public float dashSpeed = 60.0f;
 
     private CharacterController _charController;
     private float _vertSpeed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,10 +45,6 @@ public class Movement : MonoBehaviour
             if(_vertSpeed < terminalVelocity){
                 _vertSpeed = terminalVelocity;
             }
-        }
-
-        if(Input.GetButtonDown("Dash")){
-            movement *= dashSpeed;
         }
 
         movement.y = _vertSpeed;
